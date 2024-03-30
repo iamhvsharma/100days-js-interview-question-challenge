@@ -24,18 +24,29 @@ const findLongestWord = (str) => {
     // console.log(strArr);
 
     
-    strArr = strArr.sort((a,b) => a.length - b.length)
+    // strArr = strArr.sort((a,b) => a.length - b.length)
+
     // The sort method first sort the array in the alphabetical order and then the callback function arranges the array in ascending order
     // if you do (b-a) then the array will be arranged in the descending order 
 
     // console.log(strArr);
 
     // Now as we know that the last element of Array is of longest length so we will return the element on the last index using "at" method
-    return strArr.at(-1); 
 
-    // Using Reduce method
+    // return strArr.at(-1); 
 
-    
+
+
+    // Using Reduce method {Second method}
+
+    // return strArr.reduce(
+    //     (accumulator, currentValue) => (accumulator.length > currentValue.length ? accumulator : currentValue), ""
+    //     );
+
+
+    // Reduce Function MDN
+    // The reduce() method is an iterative method. It runs a "reducer" callback function over all elements in the array, in ascending-index order, and accumulates them into a single value. Every time, the return value of callbackFn is passed into callbackFn again on next invocation as accumulator. The final value of accumulator (which is the value returned from callbackFn on the final iteration of the array) becomes the return value of reduce(). Read the iterative methods section for more information about how these methods work in general.
+        
 
 }
 
